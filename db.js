@@ -14,7 +14,7 @@ const { Sequelize } = require('sequelize');
 //   return mysql.createConnection(dbConfig);
 // }
 
-const sequelize = new Sequelize(`${process.env.database}`, `${process.env.root}`, '', {
+const sequelize = new Sequelize(`${process.env.database}`, `${process.env.root}`, `${process.env.password}`, {
   host: `${process.env.host}`,
   dialect: 'mysql'
 });
