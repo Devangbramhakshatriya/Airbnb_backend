@@ -14,8 +14,8 @@ const { Sequelize } = require('sequelize');
 //   return mysql.createConnection(dbConfig);
 // }
 
-const sequelize = new Sequelize('airbnb', 'root', '', {
-  host: 'localhost',
+const sequelize = new Sequelize(`${process.env.database}`, `${process.env.root}`, '', {
+  host: `${process.env.host}`,
   dialect: 'mysql'
 });
 
